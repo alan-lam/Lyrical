@@ -1,6 +1,9 @@
 package com.ntrllog.lyrical;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -50,5 +53,15 @@ public class MainActivity extends AppCompatActivity {
         x.setPlayButton(playButton);
 
         ImageButton lyricsButton = findViewById(R.id.lyrics_button);
+        lyricsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences whichSong = getSharedPreferences("song", MODE_PRIVATE);
+                String songName = whichSong.getString("songName", "iceicebaby");
+                Intent lyricsActivity = new Intent(MainActivity.this, LyricsActivity.class);
+                lyricsActivity.putExtra("songName", songName);
+                startActivity(lyricsActivity);
+            }
+        });
     }
 }
