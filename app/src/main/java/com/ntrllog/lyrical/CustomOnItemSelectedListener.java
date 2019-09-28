@@ -32,7 +32,8 @@ public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedL
             new Song("jackpotscottywotty", R.raw.jackpotscottywotty),
             new Song("ugod", R.raw.ugod),
             new Song("mastakilla", R.raw.mastakilla),
-            new Song("gza", R.raw.gza) };
+            new Song("gza", R.raw.gza),
+            new Song("wutangforever", R.raw.wutangforever) };
 
     public CustomOnItemSelectedListener(Context c) {
         this.context = c;

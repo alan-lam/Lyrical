@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         list.add("Wu Tang Forever - U-God");
         list.add("Wu Tang Forever - Masta Killa");
         list.add("Wu Tang Forever - GZA");
+        list.add("Wu Tang Forever - Logic ft. Wu Tang Clan");
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, list);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
